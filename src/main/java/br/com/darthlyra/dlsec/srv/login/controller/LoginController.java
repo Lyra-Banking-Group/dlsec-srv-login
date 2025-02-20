@@ -32,13 +32,13 @@ public class LoginController {
 
         var tokenJWT = tokenService.gerarToken((Funcionario) authentication.getPrincipal());
 
-        return ResponseEntity.ok(dados);
+        return ResponseEntity.ok("teste");
     }
 
     @PostMapping("/v1/encriptar")
-    public void encriptarSenha(@RequestBody String senha) {
+    public void encriptarSenha(@RequestBody DadosSenha senha) {
         String salt = BCrypt.gensalt();  // Gera um salt aleatório
-        String hashSenha = BCrypt.hashpw(senha, salt);  // Criptografa a senha
+        String hashSenha = BCrypt.hashpw(senha.senha(), salt);  // Criptografa a senha
 
         System.out.println("Hash da senha: " + hashSenha);
 
