@@ -3,6 +3,7 @@ package br.com.darthlyra.dlsec.srv.login.controller;
 import br.com.darthlyra.dlsec.srv.login.domain.Funcionario;
 import br.com.darthlyra.dlsec.srv.login.dto.DadosAutenticacao;
 import br.com.darthlyra.dlsec.srv.login.dto.DadosSenha;
+import br.com.darthlyra.dlsec.srv.login.dto.DadosTokenFuncionario;
 import br.com.darthlyra.dlsec.srv.login.service.TokenService;
 import jakarta.validation.Valid;
 import org.mindrot.jbcrypt.BCrypt;
@@ -32,7 +33,7 @@ public class LoginController {
 
         var tokenJWT = tokenService.gerarToken((Funcionario) authentication.getPrincipal());
 
-        return ResponseEntity.ok("teste");
+        return ResponseEntity.ok(new DadosTokenFuncionario(tokenJWT));
     }
 
     @PostMapping("/v1/encriptar")
