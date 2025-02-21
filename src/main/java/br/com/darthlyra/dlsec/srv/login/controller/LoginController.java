@@ -5,6 +5,7 @@ import br.com.darthlyra.dlsec.srv.login.dto.DadosAutenticacao;
 import br.com.darthlyra.dlsec.srv.login.dto.DadosSenha;
 import br.com.darthlyra.dlsec.srv.login.dto.DadosTokenFuncionario;
 import br.com.darthlyra.dlsec.srv.login.service.TokenService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@SecurityRequirement(name = "bearer-key")
 @RestController
 @RequestMapping("/dlsec-srv-login")
 public class LoginController {
