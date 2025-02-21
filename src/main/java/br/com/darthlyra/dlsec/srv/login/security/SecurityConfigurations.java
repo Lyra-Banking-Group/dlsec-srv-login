@@ -1,4 +1,4 @@
-package br.com.darthlyra.dlsec.srv.login.infra.security;
+package br.com.darthlyra.dlsec.srv.login.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

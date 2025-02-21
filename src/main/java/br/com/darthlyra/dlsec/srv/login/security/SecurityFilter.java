@@ -1,4 +1,4 @@
-package br.com.darthlyra.dlsec.srv.login.infra.security;
+package br.com.darthlyra.dlsec.srv.login.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
