@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.darthlyra</groupId>
 	<artifactId>dlsec-srv-login</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>dlsec-srv-login</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
